@@ -1,0 +1,26 @@
+{
+  "name": "sizwe-web-profile",
+  "version": "1.0.0",
+  "description": "Personal web profile with blog functionality",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "blog",
+    "web-development",
+    "python",
+    "javascript",
+    "vbnet"
+  ],
+  "author": "Sizwe Ramokhali",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

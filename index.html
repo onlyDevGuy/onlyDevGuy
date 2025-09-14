@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zee Technologies - Modern Software Solutions">
+    <meta name="theme-color" content="#000000">
+    <title>Zee Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="side-dock">
+        <div class="dock-brand">
+            <span class="logo">ZT</span>
+        </div>
+        <ul class="dock-links">
+            <li>
+                <a href="#home" class="dock-link active" data-tooltip="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="dock-link" data-tooltip="About">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#services" class="dock-link" data-tooltip="Services">
+                    <i class="fas fa-cogs"></i>
+                </a>
+            </li>
+            <li>
+                <a href="python-projects.html" class="dock-link" data-tooltip="Python Projects">
+                    <i class="fab fa-python"></i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript-projects.html" class="dock-link" data-tooltip="JavaScript Projects">
+                    <i class="fab fa-js"></i>
+                </a>
+            </li>
+            <li>
+                <a href="vbnet-projects.html" class="dock-link" data-tooltip="VB.NET Projects">
+                    <i class="fas fa-desktop"></i>
+                </a>
+            </li>
+            <li>
+                <a href="web-projects.html" class="dock-link" data-tooltip="Web Projects">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </li>
+            <li>
+                <a href="blog.html" class="dock-link" data-tooltip="Blog">
+                    <i class="fas fa-blog"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="dock-link" data-tooltip="Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <main class="main-content">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="profile-container">
+                    <img src="assets/Sizwe Ramokhali.jpeg" alt="Sizwe Ramokhali" class="profile-picture">
+                    <div class="profile-backdrop"></div>
+                </div>
+                <h1 class="glitch-text">Welcome to the Future</h1>
+                <p class="typing-text">I'm Sizwe Ramokhali, crafting digital solutions for tomorrow.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-primary">Get in Touch</a>
+                    <a href="#services" class="cta-secondary">Explore Services</a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="particles"></div>
+            </div>
+        </section>
+
+        <section id="about" class="section-dark">
+            <div class="container">
+                <h2 class="section-title">About My Journey</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-code card-icon"></i>
+                        <h3>Problem Solver</h3>
+                        <p>Turning complex challenges into elegant solutions through code.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-lightbulb card-icon"></i>
+                        <h3>Innovator</h3>
+                        <p>Creating innovative solutions that push technological boundaries.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-rocket card-icon"></i>
+                        <h3>Future-Focused</h3>
+                        <p>Always learning and adapting to emerging technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section-light">
+            <div class="container">
+                <h2 class="section-title">Services</h2>
+                <div class="services-grid">
+                    <div class="service-card" data-title="Python Development" data-description="I build powerful and efficient backend systems, automation scripts, and data analysis tools using Python. From simple scripts to complex applications, I deliver robust and scalable solutions.">
+                        <i class="fab fa-python"></i>
+                        <h3>Python Development</h3>
+                        <p>Custom automation and data solutions</p>
+                    </div>
+                    <div class="service-card" data-title="JavaScript Development" data-description="I create dynamic and interactive front-end experiences with modern JavaScript frameworks like React and Vue. I specialize in building single-page applications (SPAs) that are fast, responsive, and user-friendly.">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <p>Interactive web applications</p>
+                    </div>
+                    <div class="service-card" data-title="VB.NET Development" data-description="I develop custom desktop applications for Windows using VB.NET. My applications are designed to be intuitive, reliable, and tailored to meet your specific business needs, from data management to process automation.">
+                        <i class="fas fa-code"></i>
+                        <h3>VB.NET</h3>
+                        <p>Desktop application development</p>
+                    </div>
+                    <div class="service-card" data-title="Web Development" data-description="I design and develop modern, responsive websites from the ground up. Using the latest technologies like HTML5, CSS3, and JavaScript, I create beautiful and functional websites that work seamlessly across all devices.">
+                        <i class="fas fa-globe"></i>
+                        <h3>Web Development</h3>
+                        <p>Modern, responsive websites</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section id="contact" class="section-dark">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:SizweRamokhali246@gmail.com">SizweRamokhali246@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="www.linkedin.com/in/sizwe-ramokhali-78a2b821a" target="_blank">Sizwe Ramokhali</a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">ZT</span>
+                    <p>Building tomorrow's technology today</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zee Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

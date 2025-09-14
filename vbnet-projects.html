@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VB.NET Projects - Zee Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vbnet-projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <nav class="side-dock">
+        <div class="dock-brand">
+            <span class="logo">ZT</span>
+        </div>
+        <ul class="dock-links">
+            <li>
+                <a href="index.html" class="dock-link" data-tooltip="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#about" class="dock-link" data-tooltip="About">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#services" class="dock-link" data-tooltip="Services">
+                    <i class="fas fa-cogs"></i>
+                </a>
+            </li>
+            <li>
+                <a href="python-projects.html" class="dock-link" data-tooltip="Python Projects">
+                    <i class="fab fa-python"></i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript-projects.html" class="dock-link" data-tooltip="JavaScript Projects">
+                    <i class="fab fa-js"></i>
+                </a>
+            </li>
+            <li>
+                <a href="vbnet-projects.html" class="dock-link active" data-tooltip="VB.NET Projects">
+                    <i class="fas fa-desktop"></i>
+                </a>
+            </li>
+            <li>
+                <a href="web-projects.html" class="dock-link" data-tooltip="Web Projects">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </li>
+            <li>
+                <a href="blog.html" class="dock-link" data-tooltip="Blog">
+                    <i class="fas fa-blog"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#contact" class="dock-link" data-tooltip="Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <main class="main-content">
+        <section class="upload-section">
+            <h2>Share Your VB.NET Project</h2>
+            <form id="project-upload-form" class="upload-form">
+                <div class="form-group">
+                    <label for="project-title">Project Title</label>
+                    <input type="text" id="project-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-description">Description</label>
+                    <textarea id="project-description" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="project-media">Upload Screenshots/Videos</label>
+                    <input type="file" id="project-media" accept="image/*,video/*" multiple required>
+                    <div class="media-preview" id="media-preview"></div>
+                </div>
+                <div class="form-group">
+                    <label for="project-source">Source Code Link (Optional)</label>
+                    <input type="url" id="project-source" placeholder="https://github.com/username/repository">
+                </div>
+                <button type="submit" class="submit-btn">Share Project</button>
+            </form>
+        </section>
+
+        <section class="projects-gallery">
+            <h2>VB.NET Projects Gallery</h2>
+            <div class="filters">
+                <div class="app-type-filter">
+                    <button class="filter-btn active" data-type="all">All Types</button>
+                    <button class="filter-btn" data-type="winforms">Windows Forms</button>
+                    <button class="filter-btn" data-type="wpf">WPF</button>
+                    <button class="filter-btn" data-type="console">Console</button>
+                    <button class="filter-btn" data-type="service">Services</button>
+                </div>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="project-details">
+                    <h2 id="modal-title"></h2>
+                    <div class="project-tags">
+                        <div class="app-type-tag" id="modal-app-type"></div>
+                        <div class="feature-tags" id="modal-features"></div>
+                    </div>
+                    <div class="project-gallery" id="modal-media"></div>
+                    <p id="modal-description"></p>
+                    <div class="project-links">
+                        <a id="download-link" href="#" target="_blank" class="download-btn">
+                            <i class="fas fa-download"></i> Download Application
+                        </a>
+                        <a id="source-link" href="#" target="_blank" class="source-btn">
+                            <i class="fas fa-code"></i> View Source Code
+                        </a>
+                    </div>
+                    <div class="system-requirements">
+                        <h3>System Requirements</h3>
+                        <ul>
+                            <li><i class="fas fa-desktop"></i> Windows 7 or later</li>
+                            <li><i class="fas fa-code-branch"></i> .NET Framework 4.5+</li>
+                            <li><i class="fas fa-memory"></i> 2GB RAM minimum</li>
+                            <li><i class="fas fa-hdd"></i> 100MB free space</li>
+                        </ul>
+                    </div>
+                    <div class="rating-section">
+                        <h3>Rate this project</h3>
+                        <div class="stars">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                        </div>
+                        <p class="rating-message"></p>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <form id="comment-form">
+                            <textarea placeholder="Leave a comment..." required></textarea>
+                            <button type="submit" class="submit-btn">Post Comment</button>
+                        </form>
+                        <div class="comments-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vbnet-projects.js"></script>
+</body>
+</html>

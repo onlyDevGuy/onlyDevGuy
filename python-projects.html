@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Projects - Zee Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="python-projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <nav class="side-dock">
+        <div class="dock-brand">
+            <span class="logo">ZT</span>
+        </div>
+        <ul class="dock-links">
+            <li>
+                <a href="index.html" class="dock-link" data-tooltip="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#about" class="dock-link" data-tooltip="About">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#services" class="dock-link" data-tooltip="Services">
+                    <i class="fas fa-cogs"></i>
+                </a>
+            </li>
+            <li>
+                <a href="python-projects.html" class="dock-link active" data-tooltip="Python Projects">
+                    <i class="fab fa-python"></i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript-projects.html" class="dock-link" data-tooltip="JavaScript Projects">
+                    <i class="fab fa-js"></i>
+                </a>
+            </li>
+            <li>
+                <a href="vbnet-projects.html" class="dock-link" data-tooltip="VB.NET Projects">
+                    <i class="fas fa-desktop"></i>
+                </a>
+            </li>
+            <li>
+                <a href="web-projects.html" class="dock-link" data-tooltip="Web Projects">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </li>
+            <li>
+                <a href="blog.html" class="dock-link" data-tooltip="Blog">
+                    <i class="fas fa-blog"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#contact" class="dock-link" data-tooltip="Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <main class="main-content">
+        <section class="upload-section">
+            <h2>Share Your Python Project</h2>
+            <form id="project-upload-form" class="upload-form">
+                <div class="form-group">
+                    <label for="project-title">Project Title</label>
+                    <input type="text" id="project-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-description">Description</label>
+                    <textarea id="project-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="project-media">Upload Media (Images/Videos)</label>
+                    <input type="file" id="project-media" accept="image/*,video/*" multiple required>
+                    <div class="media-preview" id="media-preview"></div>
+                </div>
+                <button type="submit" class="submit-btn">Share Project</button>
+            </form>
+        </section>
+
+        <section class="projects-gallery">
+            <h2>Python Projects Gallery</h2>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="project-details">
+                    <h2 id="modal-title"></h2>
+                    <div id="modal-media"></div>
+                    <p id="modal-description"></p>
+                    <div class="rating-section">
+                        <h3>Rate this project</h3>
+                        <div class="stars">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                        </div>
+                        <p class="rating-message"></p>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <form id="comment-form">
+                            <textarea placeholder="Leave a comment..." required></textarea>
+                            <button type="submit" class="submit-btn">Post Comment</button>
+                        </form>
+                        <div class="comments-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="python-projects.js"></script>
+</body>
+</html>

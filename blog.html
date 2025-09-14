@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Zee Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="auth.js" defer></script>
+    <script src="scripts.js" defer></script>
+    <script src="blog.js" defer></script>
+</head>
+<body>
+    <!-- Side Navigation Dock -->
+    <nav class="side-dock">
+        <div class="dock-links">
+            <a href="index.html" class="dock-item" data-tooltip="Home">
+                <i class="fas fa-house"></i>
+            </a>
+            <a href="about.html" class="dock-item" data-tooltip="About">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="services.html" class="dock-item" data-tooltip="Services">
+                <i class="fas fa-cogs"></i>
+            </a>
+            <a href="python-projects.html" class="dock-item" data-tooltip="Python Projects">
+                <i class="fab fa-python"></i>
+            </a>
+            <a href="javascript-projects.html" class="dock-item" data-tooltip="JavaScript Projects">
+                <i class="fab fa-js"></i>
+            </a>
+            <a href="vbnet-projects.html" class="dock-item" data-tooltip="VB.NET Projects">
+                <i class="fas fa-desktop"></i>
+            </a>
+            <a href="web-projects.html" class="dock-item" data-tooltip="Web Projects">
+                <i class="fas fa-globe"></i>
+            </a>
+            <a href="blog.html" class="dock-item active" data-tooltip="Blog">
+                <i class="fas fa-blog"></i>
+            </a>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <main class="main-content">
+        <!-- Admin Section -->
+        <section class="admin-section" style="display: none;">
+            <div class="admin-login" id="admin-login">
+                <h2>Admin Login</h2>
+                <form id="admin-login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="admin-password">Admin Password</label>
+                        <input type="password" id="admin-password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+
+            <div class="blog-editor" id="blog-editor" style="display: none;">
+                <h2>Create New Blog Post</h2>
+                <form id="blog-post-form" class="blog-form">
+                    <div class="form-group">
+                        <label for="blog-title">Title</label>
+                        <input type="text" id="blog-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blog-category">Category</label>
+                        <select id="blog-category" required>
+                            <option value="tech">Technology</option>
+                            <option value="programming">Programming</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="personal">Personal</option>
+                            <option value="tutorial">Tutorial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="blog-content">Content</label>
+                        <div id="rich-text-editor" class="rich-text-editor">
+                            <div class="editor-toolbar">
+                                <button type="button" data-command="bold"><i class="fas fa-bold"></i></button>
+                                <button type="button" data-command="italic"><i class="fas fa-italic"></i></button>
+                                <button type="button" data-command="underline"><i class="fas fa-underline"></i></button>
+                                <button type="button" data-command="insertOrderedList"><i class="fas fa-list-ol"></i></button>
+                                <button type="button" data-command="insertUnorderedList"><i class="fas fa-list-ul"></i></button>
+                                <button type="button" data-command="createLink"><i class="fas fa-link"></i></button>
+                                <button type="button" data-command="insertImage"><i class="fas fa-image"></i></button>
+                            </div>
+                            <div id="editor-content" contenteditable="true"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="blog-media">Media Files</label>
+                        <input type="file" id="blog-media" multiple accept="image/*,video/*">
+                        <div id="media-preview" class="media-preview"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="blog-tags">Tags (comma separated)</label>
+                        <input type="text" id="blog-tags" placeholder="e.g., programming, python, web development">
+                    </div>
+                    <button type="submit" class="btn">Publish Post</button>
+                    <button type="button" class="btn btn-secondary" id="save-draft">Save as Draft</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Public Blog Section -->
+        <section class="blog-section">
+            <header class="blog-header">
+                <div class="blog-header-top">
+                    <h1>My Blog</h1>
+                    <div class="admin-controls">
+                        <button id="create-blog-btn" class="btn btn-primary" style="display: none;">
+                            <i class="fas fa-plus"></i> Create New Blog
+                        </button>
+                        <button id="logout-btn" class="btn btn-secondary" style="display: none;">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+                <div class="blog-filters">
+                    <div class="search-bar">
+                        <input type="text" id="search-blogs" placeholder="Search blogs...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="filter-options">
+                        <select id="category-filter">
+                            <option value="">All Categories</option>
+                            <option value="tech">Technology</option>
+                            <option value="programming">Programming</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="personal">Personal</option>
+                            <option value="tutorial">Tutorial</option>
+                        </select>
+                        <select id="sort-by">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+
+            <div class="blog-grid" id="blog-grid">
+                <!-- Blog posts will be dynamically loaded here -->
+            </div>
+
+            <div class="blog-pagination">
+                <button class="btn btn-secondary" id="load-more">Load More Posts</button>
+            </div>
+        </section>
+
+        <!-- Blog Post Modal -->
+        <div class="modal" id="blog-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <article class="blog-post-full">
+                    <header class="post-header">
+                        <h2 id="modal-title"></h2>
+                        <div class="post-meta">
+                            <span class="post-date"></span>
+                            <span class="post-category"></span>
+                            <span class="post-author">By Sizwe</span>
+                        </div>
+                    </header>
+                    <div class="post-content"></div>
+                    <div class="post-media"></div>
+                    <div class="post-tags"></div>
+                    <div class="post-interactions">
+                        <div class="interaction-buttons">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span class="likes-count">0</span>
+                            </button>
+                            <button class="share-btn">
+                                <i class="fas fa-share"></i>
+                                Share
+                            </button>
+                        </div>
+                        <div class="comments-section">
+                            <h3>Comments</h3>
+                            <form id="comment-form" class="comment-form">
+                                <textarea placeholder="Leave a comment..." required></textarea>
+                                <button type="submit" class="btn">Post Comment</button>
+                            </form>
+                            <div class="comments-list"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

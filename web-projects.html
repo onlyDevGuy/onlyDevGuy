@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Projects - Zee Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="web-projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <nav class="side-dock">
+        <div class="dock-brand">
+            <span class="logo">ZT</span>
+        </div>
+        <ul class="dock-links">
+            <li>
+                <a href="index.html" class="dock-link" data-tooltip="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#about" class="dock-link" data-tooltip="About">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#services" class="dock-link" data-tooltip="Services">
+                    <i class="fas fa-cogs"></i>
+                </a>
+            </li>
+            <li>
+                <a href="python-projects.html" class="dock-link" data-tooltip="Python Projects">
+                    <i class="fab fa-python"></i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript-projects.html" class="dock-link" data-tooltip="JavaScript Projects">
+                    <i class="fab fa-js"></i>
+                </a>
+            </li>
+            <li>
+                <a href="vbnet-projects.html" class="dock-link" data-tooltip="VB.NET Projects">
+                    <i class="fas fa-desktop"></i>
+                </a>
+            </li>
+            <li>
+                <a href="web-projects.html" class="dock-link active" data-tooltip="Web Projects">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </li>
+            <li>
+                <a href="blog.html" class="dock-link" data-tooltip="Blog">
+                    <i class="fas fa-blog"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html#contact" class="dock-link" data-tooltip="Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <main class="main-content">
+        <section class="admin-login" id="admin-login" style="display: none;">
+            <h2>Admin Login</h2>
+            <form id="admin-login-form" class="login-form">
+                <div class="form-group">
+                    <label for="admin-password">Admin Password</label>
+                    <input type="password" id="admin-password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </section>
+
+        <section class="upload-section" style="display: none;">
+            <h2>Share Your Web Project</h2>
+            <form id="project-upload-form" class="upload-form">
+                <div class="form-group">
+                    <label for="project-title">Project Title</label>
+                    <input type="text" id="project-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-description">Description</label>
+                    <textarea id="project-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Project Type</label>
+                    <div class="project-type-tags">
+                        <label class="type-tag"><input type="radio" name="project-type" value="website"> Website</label>
+                        <label class="type-tag"><input type="radio" name="project-type" value="webapp"> Web Application</label>
+                        <label class="type-tag"><input type="radio" name="project-type" value="ecommerce"> E-commerce</label>
+                        <label class="type-tag"><input type="radio" name="project-type" value="portfolio"> Portfolio</label>
+                        <label class="type-tag"><input type="radio" name="project-type" value="blog"> Blog</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Technologies Used</label>
+                    <div class="tech-tags">
+                        <div class="frontend-tags">
+                            <h4>Frontend</h4>
+                            <label class="tech-tag"><input type="checkbox" value="html5"> HTML5</label>
+                            <label class="tech-tag"><input type="checkbox" value="css3"> CSS3</label>
+                            <label class="tech-tag"><input type="checkbox" value="javascript"> JavaScript</label>
+                            <label class="tech-tag"><input type="checkbox" value="react"> React</label>
+                            <label class="tech-tag"><input type="checkbox" value="vue"> Vue.js</label>
+                            <label class="tech-tag"><input type="checkbox" value="angular"> Angular</label>
+                            <label class="tech-tag"><input type="checkbox" value="bootstrap"> Bootstrap</label>
+                            <label class="tech-tag"><input type="checkbox" value="tailwind"> Tailwind</label>
+                        </div>
+                        <div class="backend-tags">
+                            <h4>Backend</h4>
+                            <label class="tech-tag"><input type="checkbox" value="nodejs"> Node.js</label>
+                            <label class="tech-tag"><input type="checkbox" value="php"> PHP</label>
+                            <label class="tech-tag"><input type="checkbox" value="python"> Python</label>
+                            <label class="tech-tag"><input type="checkbox" value="ruby"> Ruby</label>
+                            <label class="tech-tag"><input type="checkbox" value="java"> Java</label>
+                            <label class="tech-tag"><input type="checkbox" value="dotnet"> .NET</label>
+                        </div>
+                        <div class="database-tags">
+                            <h4>Database</h4>
+                            <label class="tech-tag"><input type="checkbox" value="mysql"> MySQL</label>
+                            <label class="tech-tag"><input type="checkbox" value="mongodb"> MongoDB</label>
+                            <label class="tech-tag"><input type="checkbox" value="postgresql"> PostgreSQL</label>
+                            <label class="tech-tag"><input type="checkbox" value="firebase"> Firebase</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="project-features">Key Features</label>
+                    <div class="feature-tags">
+                        <label class="feature-tag"><input type="checkbox" value="responsive"> Responsive Design</label>
+                        <label class="feature-tag"><input type="checkbox" value="pwa"> Progressive Web App</label>
+                        <label class="feature-tag"><input type="checkbox" value="auth"> Authentication</label>
+                        <label class="feature-tag"><input type="checkbox" value="api"> API Integration</label>
+                        <label class="feature-tag"><input type="checkbox" value="payment"> Payment Gateway</label>
+                        <label class="feature-tag"><input type="checkbox" value="analytics"> Analytics</label>
+                        <label class="feature-tag"><input type="checkbox" value="seo"> SEO Optimized</label>
+                        <label class="feature-tag"><input type="checkbox" value="multilingual"> Multilingual</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="project-media">Upload Screenshots/Videos</label>
+                    <input type="file" id="project-media" accept="image/*,video/*" multiple required>
+                    <div class="media-preview" id="media-preview"></div>
+                </div>
+                <div class="form-group">
+                    <label for="project-url">Live Website URL</label>
+                    <input type="url" id="project-url" placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label for="project-source">Source Code URL</label>
+                    <input type="url" id="project-source" placeholder="https://github.com/username/repository">
+                </div>
+                <button type="submit" class="submit-btn">Share Project</button>
+            </form>
+        </section>
+
+        <section class="projects-gallery">
+            <h2>Web Projects Gallery</h2>
+            <div class="filters">
+                <div class="type-filter">
+                    <button class="filter-btn active" data-type="all">All Projects</button>
+                    <button class="filter-btn" data-type="website">Websites</button>
+                    <button class="filter-btn" data-type="webapp">Web Apps</button>
+                    <button class="filter-btn" data-type="ecommerce">E-commerce</button>
+                    <button class="filter-btn" data-type="portfolio">Portfolios</button>
+                    <button class="filter-btn" data-type="blog">Blogs</button>
+                </div>
+                <div class="tech-filter">
+                    <select id="tech-select">
+                        <option value="all">All Technologies</option>
+                        <optgroup label="Frontend">
+                            <option value="html5">HTML5</option>
+                            <option value="css3">CSS3</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="react">React</option>
+                            <option value="vue">Vue.js</option>
+                            <option value="angular">Angular</option>
+                        </optgroup>
+                        <optgroup label="Backend">
+                            <option value="nodejs">Node.js</option>
+                            <option value="php">PHP</option>
+                            <option value="python">Python</option>
+                            <option value="ruby">Ruby</option>
+                            <option value="java">Java</option>
+                            <option value="dotnet">.NET</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="feature-filter">
+                    <select id="feature-select">
+                        <option value="all">All Features</option>
+                        <option value="responsive">Responsive Design</option>
+                        <option value="pwa">Progressive Web App</option>
+                        <option value="auth">Authentication</option>
+                        <option value="api">API Integration</option>
+                        <option value="payment">Payment Gateway</option>
+                        <option value="analytics">Analytics</option>
+                        <option value="seo">SEO Optimized</option>
+                        <option value="multilingual">Multilingual</option>
+                    </select>
+                </div>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="project-details">
+                <h2 class="project-title"></h2>
+                <div class="project-media"></div>
+                <p class="project-description"></p>
+                
+                <!-- Rating Section -->
+                <div class="rating-container">
+                    <h3>Rate this Project</h3>
+                    <div class="star-rating"></div>
+                    <p class="rating-text">Current Rating: <span class="current-rating">0</span>/5</p>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="comments-section">
+                    <h3>Comments</h3>
+                    <div class="comment-form">
+                        <textarea placeholder="Share your thoughts about this project..." maxlength="500"></textarea>
+                        <button onclick="submitComment(this.closest('.modal-content').getAttribute('data-project-id'), this.previousElementSibling.value)">
+                            Post Comment
+                        </button>
+                    </div>
+                    <div class="comments-list"></div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-type"></div>
+                    <div class="project-tech">
+                        <div class="frontend-tech"></div>
+                        <div class="backend-tech"></div>
+                        <div class="database-tech"></div>
+                    </div>
+                    <div class="project-features"></div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="website-link" target="_blank">Visit Website</a>
+                    <a href="#" class="source-link" target="_blank">View Source</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="web-projects.js"></script>
+</body>
+</html>

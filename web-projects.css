@@ -1,0 +1,540 @@
+/* Web Projects Page Styles */
+:root {
+    --html-color: #e34c26;
+    --css-color: #264de4;
+    --js-color: #f7df1e;
+    --react-color: #61dafb;
+    --vue-color: #42b883;
+    --angular-color: #dd1b16;
+    --node-color: #68a063;
+    --php-color: #777bb3;
+    --python-color: #3776ab;
+    --ruby-color: #cc342d;
+    --java-color: #007396;
+    --dotnet-color: #512bd4;
+    --mysql-color: #00758f;
+    --mongodb-color: #4db33d;
+    --postgresql-color: #336791;
+    --firebase-color: #ffca28;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 20px;
+}
+
+/* Upload Section */
+.upload-section {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+.upload-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--light-text);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 0.8rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Project Type Tags */
+.project-type-tags,
+.tech-tags,
+.feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.type-tag,
+.tech-tag,
+.feature-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.type-tag:hover,
+.tech-tag:hover,
+.feature-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Technology Tags Sections */
+.tech-tags {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.frontend-tags,
+.backend-tags,
+.database-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.frontend-tags h4,
+.backend-tags h4,
+.database-tags h4 {
+    color: var(--light-text);
+    margin: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* Media Preview */
+.media-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.media-preview img,
+.media-preview video {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--glass-border);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.type-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background: var(--glass-bg);
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.tech-filter select,
+.feature-filter select {
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--light-text);
+    cursor: pointer;
+    min-width: 200px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-media {
+    position: relative;
+    height: 200px;
+}
+
+.project-media img,
+.project-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Technology Tags */
+.tech-stack-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.tech-stack-tag.html5 { background: var(--html-color); }
+.tech-stack-tag.css3 { background: var(--css-color); }
+.tech-stack-tag.javascript { background: var(--js-color); color: black; }
+.tech-stack-tag.react { background: var(--react-color); }
+.tech-stack-tag.vue { background: var(--vue-color); }
+.tech-stack-tag.angular { background: var(--angular-color); }
+.tech-stack-tag.nodejs { background: var(--node-color); }
+.tech-stack-tag.php { background: var(--php-color); }
+.tech-stack-tag.python { background: var(--python-color); }
+.tech-stack-tag.ruby { background: var(--ruby-color); }
+.tech-stack-tag.java { background: var(--java-color); }
+.tech-stack-tag.dotnet { background: var(--dotnet-color); }
+.tech-stack-tag.mysql { background: var(--mysql-color); }
+.tech-stack-tag.mongodb { background: var(--mongodb-color); }
+.tech-stack-tag.postgresql { background: var(--postgresql-color); }
+.tech-stack-tag.firebase { background: var(--firebase-color); color: black; }
+
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.website-btn,
+.source-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.website-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.source-btn {
+    background: var(--glass-bg);
+    color: var(--light-text);
+    border: 1px solid var(--glass-border);
+}
+
+.website-btn:hover,
+.source-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Styles */
+.modal-content {
+    background: var(--dark-bg);
+    border: 1px solid var(--primary-color);
+    max-width: 900px;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.project-gallery img,
+.project-gallery video {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover,
+.project-gallery video:hover {
+    transform: scale(1.05);
+}
+
+/* Technology Stack Section */
+.tech-stack {
+    background: var(--glass-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.tech-stack h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.stack-section {
+    margin-bottom: 1.5rem;
+}
+
+.stack-section h4 {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Features List */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: var(--glass-bg);
+    border-radius: 8px;
+}
+
+.feature-item i {
+    color: var(--primary-color);
+}
+
+/* Rating Styles */
+.rating-container {
+    margin: 1rem 0;
+}
+
+.star-rating {
+    display: inline-flex;
+    gap: 0.25rem;
+}
+
+.star-rating i {
+    color: #ffd700;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating i:hover {
+    color: #ffed4a;
+}
+
+/* Comments Section Styles */
+.comments-section {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.comment {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.comment-user {
+    font-weight: 600;
+    color: #333;
+}
+
+.comment-date {
+    color: #888;
+}
+
+.comment-text {
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.like-btn:hover {
+    background: #eee;
+    color: #333;
+}
+
+.like-btn i {
+    font-size: 0.9rem;
+}
+
+/* Comment Form */
+.comment-form {
+    margin-top: 1rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.comment-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.comment-form button:hover {
+    background: #0056b3;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    background: #28a745;
+    color: white;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification.error {
+    background: #dc3545;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 10px;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .type-filter {
+        justify-content: center;
+    }
+
+    .tech-filter,
+    .feature-filter {
+        width: 100%;
+    }
+
+    .tech-filter select,
+    .feature-filter select {
+        width: 100%;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .tech-stack .stack-section {
+        margin-bottom: 2rem;
+    }
+}
