@@ -139,7 +139,7 @@ A modern, responsive web profile showcasing my skills in Python, JavaScript, VB.
 
 For questions or issues, please contact:
 - Email: SizweRamokhali246@gmail.com
-- LinkedIn: [Sizwe Ramokhali](https://www.linkedin.com/in/sizweware)
+- LinkedIn: [Sizwe Ramokhali](http://www.linkedin.com/in/sizwe-ramokhali-78a2b821a/)
 
 ## License
 
